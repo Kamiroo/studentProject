@@ -5,6 +5,7 @@ public class Student {
     private String surname;
     private String birthDate;
     private String schoolClass;
+
     private int[] schoolGrades = new int[7];
 
     int getIndexNumber() {
@@ -36,7 +37,7 @@ public class Student {
     }
 
     void setBirthDate(String birthDate) {
-        this.indexNumber = indexNumber;
+        this.birthDate = birthDate;
     }
 
     String getSchoolClass() {
@@ -45,5 +46,13 @@ public class Student {
 
     void setSchoolClass(String schoolClass) {
         this.schoolClass = schoolClass;
+    }
+
+    int[] getSchoolGrades() {
+        return schoolGrades;
+    }
+
+    void setSchoolGrades(int[] schoolGrades) {
+        this.schoolGrades = schoolGrades;
     }
 }
