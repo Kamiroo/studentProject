@@ -5,8 +5,15 @@ public class Student {
     private String surname;
     private String birthDate;
     private String schoolClass;
-
     private int[] schoolGrades = new int[7];
+
+    public boolean addGrade(int grade) {
+        if (grade >= 1 && grade <= 6) {
+                return true;
+            }
+        return false;
+    }
+
 
     int getIndexNumber() {
         return this.indexNumber;
