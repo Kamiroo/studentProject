@@ -1,4 +1,7 @@
+import java.beans.PropertyEditorSupport;
+
 public class Student {
+
 
     private int indexNumber;
     private String name;
@@ -8,11 +11,21 @@ public class Student {
     private int[] schoolGrades = new int[7];
 
     public boolean addGrade(int grade) {
+
         if (grade >= 1 && grade <= 6) {
-                return true;
+            for (int i = 0; i < schoolGrades.length ; i++){
+                if (schoolGrades[i] == 0){
+                    schoolGrades[i] = grade;
+                    return true;
+                }
             }
+        } else {
+            return false;
+        }
         return false;
     }
+
+
 
 
     int getIndexNumber() {
