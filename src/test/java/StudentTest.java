@@ -34,4 +34,23 @@ public class StudentTest {
         assertEquals(false, student.addGrade(3));
     }
 
+    @Test
+    public void shouldReturn3WhenGradesSumEqualTo21() {
+        assertEquals(true, student.addGrade(6));
+        assertEquals(true, student.addGrade(1));
+        assertEquals(true, student.addGrade(2));
+        assertEquals(true, student.addGrade(5));
+        assertEquals(true, student.addGrade(4));
+        assertEquals(true, student.addGrade(2));
+        assertEquals(true, student.addGrade(1));
+        assertEquals(3, student.calculateAvgGrade(), 0);
+    }
+
+    @Test
+    public void shouldReturn3WhenGradesSumEqualTo6() {
+        assertEquals(true, student.addGrade(5));
+        assertEquals(true, student.addGrade(1));
+        assertEquals(3, student.calculateAvgGrade(), 0);
+    }
+
 }

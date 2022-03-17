@@ -25,8 +25,18 @@ public class Student {
         return false;
     }
 
-
-
+    public double calculateAvgGrade() {
+        double sum = 0;
+        int numberOfGrades = 0;
+        for (int i = 0; i < schoolGrades.length; i++){
+            sum = sum + schoolGrades[i];
+            if(schoolGrades[i] != 0) {
+                numberOfGrades += + 1;
+            }
+        }
+        sum /= numberOfGrades;
+        return sum;
+    }
 
     int getIndexNumber() {
         return this.indexNumber;
