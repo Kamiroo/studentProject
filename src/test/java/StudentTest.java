@@ -5,6 +5,7 @@ import static org.junit.Assert.assertEquals;
 
 public class StudentTest {
     Student student = new Student();
+    Student2 student2 = new Student2();
 
     @Test
     public void shouldReturnTrueWhenGradeIsBetween1And6() {
@@ -51,6 +52,12 @@ public class StudentTest {
         assertEquals(true, student.addGrade(5));
         assertEquals(true, student.addGrade(1));
         assertEquals(3, student.calculateAvgGrade(), 0);
+    }
+
+    @Test
+    public void should() {
+        assertEquals(true, student2.addGrade(5, "Matematyka", "25.05.2018"));
+        assertEquals(true, student2.addGrade(4, "Matematyka", "19.03.2020"));
     }
 
 }
