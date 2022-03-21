@@ -2,10 +2,10 @@ import java.time.LocalDate;
 
 public class Grade {
     private int grade;
-    private String subject;
+    private SchoolSubjectEnum subject;
     private LocalDate gradDate;
 
-    public Grade(int grade, String subject, LocalDate gradeDate) {
+    public Grade(int grade, SchoolSubjectEnum subject, LocalDate gradeDate) {
         this.grade = grade;
         this.subject = subject;
         this.gradDate = gradeDate;
@@ -19,11 +19,11 @@ public class Grade {
         this.grade = grade;
     }
 
-    public String getSubject() {
+    public SchoolSubjectEnum getSubject() {
         return subject;
     }
 
-    public void setSubject(String subject) {
+    public void setSubject(SchoolSubjectEnum subject) {
         this.subject = subject;
     }
 

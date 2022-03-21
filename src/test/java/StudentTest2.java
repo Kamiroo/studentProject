@@ -11,30 +11,30 @@ public class StudentTest2 {
 
     @Test
     public void shouldReturnTrueWhenGradeBetween1And6() {
-        Grade grade = new Grade(1, "Matma", LocalDate.of(2003,3,20));
-        Grade grade2 = new Grade(6, "Historia", LocalDate.of(2010,5,10));
+        Grade grade = new Grade(4, SchoolSubjectEnum.valueOf("MATEMATYKA"), LocalDate.of(2010,5,10));
+        Grade grade2 = new Grade(6, SchoolSubjectEnum.valueOf("POLSKI"), LocalDate.of(2010,5,10));
         assertEquals(true, student2.addGrade(grade));
         assertEquals(true, student2.addGrade(grade2));
     }
 
     @Test
     public void shouldReturnFalseWhenGradeLessThan1() {
-        Grade grade = new Grade(0, "Matma", LocalDate.of(2003,3,20));
+        Grade grade = new Grade(0, SchoolSubjectEnum.valueOf("FIZYKA"), LocalDate.of(2003,3,20));
         assertFalse(student2.addGrade(grade));
     }
 
     @Test
     public void shouldReturnFalseWhenGradeOver6() {
-        Grade grade = new Grade(7, "Matma", LocalDate.of(2003,3,20));
+        Grade grade = new Grade(7, SchoolSubjectEnum.valueOf("BIOLOGIA"), LocalDate.of(2003,3,20));
         assertFalse(student2.addGrade(grade));
     }
 
     @Test
     public void shouldReturn3When13DividedBy4() {
-        Grade grade = new Grade(1, "Matma", LocalDate.of(2003,3,20));
-        Grade grade1 = new Grade(3, "W-F", LocalDate.of(2003,3,10));
-        Grade grade2 = new Grade(4, "Przyroda", LocalDate.of(2003,3,12));
-        Grade grade3 = new Grade(5, "Historia", LocalDate.of(2003,3,14));
+        Grade grade = new Grade(1, SchoolSubjectEnum.valueOf("MATEMATYKA"), LocalDate.of(2003,3,20));
+        Grade grade1 = new Grade(3, SchoolSubjectEnum.valueOf("ANGIELSKI"), LocalDate.of(2003,3,10));
+        Grade grade2 = new Grade(4, SchoolSubjectEnum.valueOf("FIZYKA"), LocalDate.of(2003,3,12));
+        Grade grade3 = new Grade(5, SchoolSubjectEnum.valueOf("POLSKi"), LocalDate.of(2003,3,14));
         assertEquals(true, student2.addGrade(grade));
         assertEquals(true, student2.addGrade(grade1));
         assertEquals(true, student2.addGrade(grade2));
